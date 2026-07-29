@@ -1,0 +1,485 @@
+/* =====================================
+   CSS VARIABLES (THEME COLORS)
+===================================== */
+
+:root {
+
+    --primary-color: #d97706;
+    --secondary-color: #78350f;
+    --dark-color: #1f2937;
+    --light-color: #fff7ed;
+    --white-color: #ffffff;
+    --text-color: #333333;
+
+    --shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+    --border-radius: 12px;
+
+    --transition: all 0.3s ease;
+
+}
+
+
+
+/* =====================================
+   DARK MODE VARIABLES
+===================================== */
+
+body:has(#theme-toggle:checked) {
+
+    --light-color: #111827;
+    --white-color: #1f2937;
+    --text-color: #ffffff;
+    --dark-color: #ffffff;
+
+}
+
+
+
+/* =====================================
+   GLOBAL RESET
+===================================== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background: var(--light-color);
+
+    color: var(--text-color);
+
+    transition: var(--transition);
+
+}
+
+
+
+img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+}
+
+
+.container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+}
+
+
+.section {
+
+    padding: 80px 0;
+
+}
+
+
+.section__title {
+
+    text-align: center;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 30px;
+
+    color: var(--primary-color);
+
+}
+
+
+.section__text {
+
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: auto;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+
+.header {
+
+    background: var(--white-color);
+
+    box-shadow: var(--shadow);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+
+
+.header .container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 0;
+
+}
+
+
+
+.header__logo {
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    color: var(--primary-color);
+
+}
+
+
+.header__logo span {
+
+    color: var(--secondary-color);
+
+}
+
+
+
+/* Navigation */
+
+
+.header__menu {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 30px;
+
+}
+
+
+
+.header__link {
+
+    color: var(--text-color);
+
+    font-weight: 500;
+
+    transition: var(--transition);
+
+}
+
+
+
+.header__link:hover {
+
+    color: var(--primary-color);
+
+}
+
+
+
+/* =====================================
+   DARK MODE SWITCH
+===================================== */
+
+
+.theme-switch input {
+
+    display: none;
+
+}
+
+
+.theme-switch__label {
+
+    cursor: pointer;
+
+    font-size: 25px;
+
+}
+
+
+
+/* =====================================
+   BUTTON COMPONENT
+===================================== */
+
+
+.button {
+
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+
+}
+
+
+
+.button--primary {
+
+    background: var(--primary-color);
+
+    color: white;
+
+}
+
+
+
+.button--primary:hover {
+
+    transform: translateY(-5px);
+
+    background: var(--secondary-color);
+
+}
+
+
+
+/* =====================================
+   HERO SECTION
+   FLEXBOX
+===================================== */
+
+
+.hero {
+
+    min-height: 90vh;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+
+.hero__container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 40px;
+
+}
+
+
+
+.hero__content {
+
+    flex: 1;
+
+}
+
+
+
+.hero__title {
+
+    font-size: 3.5rem;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.hero__text {
+
+    font-size: 1.1rem;
+
+    margin-bottom: 30px;
+
+    line-height: 1.8;
+
+}
+
+
+
+.hero__image {
+
+    flex: 1;
+
+}
+
+
+
+.hero__image img {
+
+    border-radius: 50%;
+
+    box-shadow: var(--shadow);
+
+    animation: floating 3s infinite;
+
+}
+
+
+
+/* Hero Animation */
+
+
+@keyframes floating {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+
+    50% {
+
+        transform: translateY(-15px);
+
+    }
+
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+/* =====================================
+   MENU SECTION
+   CSS GRID
+===================================== */
+
+
+.menu__grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 30px;
+
+}
+
+
+
+.menu__card {
+
+    background: var(--white-color);
+
+    border-radius: var(--border-radius);
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+
+}
+
+
+
+.menu__card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+
+
+.menu__card img {
+
+    height: 220px;
+
+    object-fit: cover;
+
+}
+
+
+
+.menu__title {
+
+    padding: 15px 20px 5px;
+
+    font-size: 1.3rem;
+
+}
+
+
+
+.menu__description {
+
+    padding: 0 20px;
+
+    line-height: 1.6;
+
+}
+
+
+
+.menu__price {
+
+    display: block;
+
+    padding: 20px;
+
+    color: var(--primary-color);
+
+    font-weight: bold;
+
+    font-size: 1.2rem;
+
+}
