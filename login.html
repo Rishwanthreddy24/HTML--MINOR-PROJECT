@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="eng"> 
+
+<head>
+     <meta charset="UTF-8">
+     <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Portal</title>
+    <link rel="stylesheet" href="style.css">
+
+    </head>
+    
+    
+
+    <style>
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            margin: 20px;
+             background:rgb(255, 192, 203);
+        }
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            
+        }
+        .container{
+            display: flex;
+            width: 80%;
+            max-width: 800px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .left{
+            flex: 1;
+            padding: 20px;
+            background-color: rgb(7, 148, 173);
+            color: white;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            text-align: center;
+        }
+        .left h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        .left  p {
+            font-size: 18px;
+        }
+
+        .right{
+            flex: 1;
+            padding: 50px;
+            width: 50% ;
+           }
+        .right h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        input{
+
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    button{
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(7, 148, 173);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(7, 148, 173);
+        }
+        p {
+            text-align: center;
+        }
+        a {
+            color: rgb(7, 148, 173);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            flex-direction: column;
+            width: 100%;
+        }
+        .left, .right {
+            width: 100%;
+        }
+        .left{
+
+            padding: 30px;
+        }
+
+
+    </style>
+<body>
+
+    
+    <div = "container">
+       
+         <div = "left">
+            <h1>  WELCOME BACK!</h1>
+         <p>sign in to continue your joourney
+         </p>
+        
+         </div>
+
+         <div = "right">
+            
+            <h2>Login</h2>
+
+            <form>
+
+            <input type="email"
+                   placeholder="Email" required>
+
+            <input type="password"
+                     placeholder="password" required>
+
+                     <button type="submit">
+                        login
+                     </button>
+
+                     </form>
+
+                     <p>Don't have an Account?
+                        <a href ="#">Sign up</a>
+                     </p>
+               
+
+         </div>
+
+
+
+    </div>
+     
+
+</body>
+
+
+</html>
