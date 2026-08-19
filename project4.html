@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Habit Tracker</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style4.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <div class="logo">
+
+                <i class="fa-solid fa-bullseye"></i>
+
+                <div>
+
+                    <h1>Habit Tracker</h1>
+
+                    <p>Build your consistency, one day at a time.</p>
+
+                </div>
+
+            </div>
+
+            <div class="header-buttons">
+
+                <button id="themeBtn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+            </div>
+
+        </header>
+
+        <section class="dashboard">
+
+            <div class="card">
+
+                <i class="fa-solid fa-list-check"></i>
+
+                <h2 id="totalHabits">0</h2>
+
+                <p>Total Habits</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-fire"></i>
+
+                <h2 id="longestStreak">0</h2>
+
+                <p>Longest Streak</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <h2 id="completedToday">0</h2>
+
+                <p>Completed Today</p>
+
+            </div>
+
+        </section>
+
+        <section class="habit-form">
+
+            <h2>Add New Habit</h2>
+
+            <form id="habitForm">
+
+                <div class="form-row">
+
+                    <div class="input-group">
+
+                        <label>Habit Name</label>
+
+                        <input
+                            type="text"
+                            id="habitName"
+                            placeholder="Example: Read 30 Minutes">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Category</label>
+
+                        <select id="category">
+
+                            <option value="Study">Study</option>
+
+                            <option value="Health">Health</option>
+
+                            <option value="Fitness">Fitness</option>
+
+                            <option value="Personal">Personal</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <button type="submit" class="add-btn">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Habit
+
+                </button>
+
+            </form>
+
+            <p id="errorMessage"></p>
+
+        </section>
+
+        <section class="search-section">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search habits...">
+
+        </section>
+
+        <section class="filters">
+
+            <button class="filter-btn active" data-category="All">
+                All
+            </button>
+
+            <button class="filter-btn" data-category="Study">
+                Study
+            </button>
+
+            <button class="filter-btn" data-category="Health">
+                Health
+            </button>
+
+            <button class="filter-btn" data-category="Fitness">
+                Fitness
+            </button>
+
+            <button class="filter-btn" data-category="Personal">
+                Personal
+            </button>
+
+        </section>
+
+        <section>
+
+            <div id="habitList" class="habit-grid"></div>
+
+        </section>
+
+        <section id="emptyState" class="empty-state">
+
+            <i class="fa-solid fa-seedling"></i>
+
+            <h2>No Habits Yet</h2>
+
+            <p>Add your first habit and start building consistency.</p>
+
+        </section>
+
+        <div id="editModal" class="modal">
+
+            <div class="modal-content">
+
+                <h2>Edit Habit</h2>
+
+                <input
+                    type="text"
+                    id="editHabitName">
+
+                <select id="editCategory">
+
+                    <option value="Study">Study</option>
+
+                    <option value="Health">Health</option>
+
+                    <option value="Fitness">Fitness</option>
+
+                    <option value="Personal">Personal</option>
+
+                </select>
+
+                <div class="modal-buttons">
+
+                    <button id="saveEdit">
+                        Save
+                    </button>
+
+                    <button id="cancelEdit">
+                        Cancel
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer>
+
+            <h3>⭐ Keep Going!</h3>
+
+            <p>Small habits every day create extraordinary results.</p>
+
+        </footer>
+
+    </div>
+
+    <script src="script4.js"></script>
+
+</body>
+
+</html>
